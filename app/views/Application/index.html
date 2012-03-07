@@ -1,0 +1,16 @@
+#{extends 'main.html' /}
+#{set title:'MP3ssimo!. Free music sharing service'/}
+<div class="container-fluid">
+    <div class="sidebar"></div>
+    <div class="content">
+<h2>Freshest music</h2>
+#{list items:tracks, as:'t' }
+#{songblock tr:t /}
+#{/list}
+#{form @Application.uploadTrack(), enctype:'multipart/form-data', id:'upload_form'}
+<h3>Add yours</h3>
+        <p><input type="file" name="track.file" class="btn" />
+        <input type="submit" name="submit" value="Upload" /></p>
+    #{/form}
+    </div>
+</div>

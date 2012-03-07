@@ -1,0 +1,5 @@
+#{form @Application.search(), enctype:'multipart/form-data', id:'find_form'}
+<a href="@{Application.index()}"><img src="@{'/public/images/logo2.png'}"/></a>
+<p>Enter text to find track <input type="text" name="q" id="find_field"/>
+    <input type="submit" name="submit" value="search" id="find_btn" class="btn"/></p>
+#{/form}

@@ -1,0 +1,11 @@
+<div id="songblock">
+    <object type="application/x-shockwave-flash" data="@{'/public/javascripts/dewplayer.swf'}" width="200" height="20" id="dewplayer" name="dewplayer">
+        <param name="movie" value="@{'/public/javascripts/dewplayer.swf'}" />
+        <param name="flashvars" value="mp3=@{Application.getLink(_tr.id)}&amp;autostart=0" />
+        <param name="wmode" value="transparent" />
+    </object>
+    <a href="@{Application.show(_tr.id)}">${_tr.artist} - ${_tr.song}</a>
+
+    <div id="social"><a href="http://twitter.com/share" class="twitter-share-button" data-url="@{Application.show(_tr.id)}" data-text="I like the song ${_tr.artist} - ${_tr.song} http://www.mp3ssimo.net@{Application.show(_tr.id)} #mp3ssimo" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <g:plusone size="small" count="false" href="@{Application.show(_tr.id)}"></g:plusone>
+    </div></div>

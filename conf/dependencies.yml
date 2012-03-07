@@ -1,0 +1,22 @@
+# Application dependencies
+
+require:
+    - play
+#    - mp3agic 0.6
+    - org.blinkenlights.jid3 -> JID3 0.46
+    - play -> dotcloud 0.2
+
+# My custom repositories
+repositories:
+#    - mp3agic:
+#        type: iBiblio
+#        root: "http://www.dfki.de/~kasper/IKS/maven/"
+#        contains:
+#            - mp3agic -> *
+    - jid3:
+        type: iBiblio
+        root: "http://www.jarvana.com/jarvana/browse/org/blinkenlights/jid3/JID3/"
+        contains:
+            - org.blinkenlights.jid3.JID3 -> *
+
+
